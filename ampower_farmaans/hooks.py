@@ -14,7 +14,7 @@ app_license = "MIT"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/ampower_farmaans/css/ampower_farmaans.css"
-# app_include_js = "/assets/ampower_farmaans/js/ampower_farmaans.js"
+# app_include_js = "/assets/js/ampower_farmaans.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/ampower_farmaans/css/ampower_farmaans.css"
@@ -28,10 +28,13 @@ app_license = "MIT"
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
-# page_js = {"page" : "public/js/file.js"}
+# page_js = {"product-traceability" : "public/js/farmaan_print.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Sales Order" : "public/js/custom_sales_order.js",
+    "Delivery Note" : "public/js/custom_delivery_note.js"
+    }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -39,6 +42,10 @@ app_license = "MIT"
 # Home Pages
 # ----------
 
+website_route_rules = [
+    # Define custom routes here
+    
+]
 # application home page (will override Website Settings)
 # home_page = "login"
 
