@@ -34,13 +34,12 @@ def attach_document(doctype_ref, document_ref, template_ref):
         content = output_buffer.getvalue()
         prepare_file = save_file(
                         f'{cur_document}.docx', 
-                        content=content, 
-                        dt=str(cur_doctype), 
+                        content=content,
+                        dt=str(cur_doctype),
                         dn=str(cur_document))
     return {
         "prepare_file": prepare_file
        }
-
 
 @frappe.whitelist()
 def download_document(doctype_ref, document_ref, template_ref):
@@ -62,8 +61,16 @@ def download_document(doctype_ref, document_ref, template_ref):
         content = output_buffer.getvalue()
         prepare_file = save_file(
                         f'{cur_document}.docx', 
-                        content=content)
+                        content=content,
+                        dt=None,
+                        dn=None,
+                        folder='Home')
     return {
         "prepare_file": prepare_file
        }
 
+@frappe.whitelist()
+def delete_document(document_name):
+    frappe.delete_doc('File', document_name, force=True)
+    return { "message": "file deleted" } 
+       
