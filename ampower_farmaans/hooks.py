@@ -1,5 +1,3 @@
-from . import __version__ as app_version
-
 app_name = "ampower_farmaans"
 app_title = "Ampower Farmaans"
 app_publisher = "Ambibuzz Technologies LLP"
@@ -14,7 +12,7 @@ app_license = "MIT"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/ampower_farmaans/css/ampower_farmaans.css"
-# app_include_js = "/assets/js/ampower_farmaans.js"
+# app_include_js = "/assets/ampower_farmaans/js/ampower_farmaans.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/ampower_farmaans/css/ampower_farmaans.css"
@@ -28,7 +26,7 @@ app_license = "MIT"
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
-# page_js = {"product-traceability" : "public/js/farmaan_print.js"}
+# page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
 doctype_js = {
@@ -42,10 +40,6 @@ doctype_js = {
 # Home Pages
 # ----------
 
-website_route_rules = [
-    # Define custom routes here
-    
-]
 # application home page (will override Website Settings)
 # home_page = "login"
 
@@ -185,4 +179,3 @@ user_data_fields = [
 # auth_hooks = [
 #	"ampower_farmaans.auth.validate"
 # ]
-

@@ -96,6 +96,19 @@ frappe.ui.form.on('Delivery Note', {
                                             frm.reload_doc();
                                             window.open(result.prepare_file.file_url)
                                             frappe.show_alert('Print document downloaded', 5);
+                                            frappe.call({
+                                                method: 'ampower_farmaans.ampower_farmaans.doctype.template_docx.template_docx.delete_document',
+                                                args: {
+                                                    document_name: result.prepare_file.name
+                                                },
+                                                callback: function (r) {
+                                                    if (!r.exc) {
+                                                        var result = JSON.parse(JSON.stringify(r.message));
+                                                        console.log("result from backend", result);
+                                                    }
+                                                }
+
+                                            })
                                             
                                         }
                                     }
