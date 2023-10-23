@@ -15,62 +15,51 @@ class TemplateDocx(Document):
     pass
 
 @frappe.whitelist()
-def attach_document(doctype_ref, document_ref, template_ref):
-    template_file = template_ref
-    prepare_file = frappe.get_doc("File", {"file_url": template_file})
-    filename = prepare_file.get_full_path()
-    cur_doctype = doctype_ref
-    cur_document =  document_ref
-    doctype_entry = frappe.get_doc(cur_doctype, cur_document)
-
+def attach_document(template_ref, cur_document):
+    context = json.loads(cur_document)
+    template_file = frappe.get_doc("File", {"file_url": template_ref})
+    filename = template_file.get_full_path()
+    # creates a object using DocxTemplate class
     docm = DocxTemplate(filename)
-
-    context = doctype_entry
-
-    docm.render(context.as_dict())
-
+    # puting the data as a dictionary for jinja variables
+    docm.render(context)
+    # to write and save .docx file in frappe the data should be byte
     with io.BytesIO() as output_buffer:
         docm.save(output_buffer)
         content = output_buffer.getvalue()
         prepare_file = save_file(
-                        f'{cur_document}.docx', 
+                        f'{context["name"]}.docx', 
                         content=content,
-                        dt=str(cur_doctype),
-                        dn=str(cur_document))
+                        dt=str(context["doctype"]),
+                        dn=str(context["name"]))
     return {
-        "prepare_file": prepare_file
+        "prepare_file": prepare_file,
        }
 
 @frappe.whitelist()
-def download_document(doctype_ref, document_ref, template_ref):
-    template_file = template_ref
-    prepare_file = frappe.get_doc("File", {"file_url": template_file})
+def download_document(template_ref, cur_document):
+    context = json.loads(cur_document)
+    prepare_file = frappe.get_doc("File", {"file_url": template_ref})
     filename = prepare_file.get_full_path()
-    cur_doctype = doctype_ref
-    cur_document =  document_ref
-    doctype_entry = frappe.get_doc(cur_doctype, cur_document)
-
+    # creates a object using DocxTemplate class
     docm = DocxTemplate(filename)
-
-    context = doctype_entry
-
-    docm.render(context.as_dict())
-
+    # puting the data as a dictionary for jinja variables
+    docm.render(context)
+    # to write and save .docx file in frappe the data should be byte
     with io.BytesIO() as output_buffer:
         docm.save(output_buffer)
         content = output_buffer.getvalue()
         prepare_file = save_file(
-                        f'{cur_document}.docx', 
+                        f'{context["name"]}.docx',
                         content=content,
                         dt=None,
                         dn=None,
                         folder='Home')
     return {
-        "prepare_file": prepare_file
+        "prepare_file": prepare_file,
        }
 
 @frappe.whitelist()
 def delete_document(document_name):
     frappe.delete_doc('File', document_name, force=True)
-    return { "message": "file deleted" } 
-       
+    return { "message": "file deleted" }
