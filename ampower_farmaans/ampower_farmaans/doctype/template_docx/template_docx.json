@@ -1,48 +1,60 @@
 {
- "actions": [],
- "allow_rename": 1,
- "creation": "2023-09-18 15:20:13.003012",
- "doctype": "DocType",
- "editable_grid": 1,
- "engine": "InnoDB",
- "field_order": [
-  "template_file",
-  "doctype_for"
- ],
- "fields": [
-  {
-   "fieldname": "template_file",
-   "fieldtype": "Attach",
-   "label": "Template File"
-  },
-  {
-   "fieldname": "doctype_for",
-   "fieldtype": "Link",
-   "label": "Doctype For",
-   "options": "DocType"
-  }
- ],
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-09-18 15:20:13.003012",
- "modified_by": "Administrator",
- "module": "Ampower Farmaans",
- "name": "Template Docx",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC"
-}
+    "actions": [],
+    "autoname": "format:{doctype_for}-{format_name}-{####}",
+    "creation": "2023-09-18 15:20:13.003012",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+     "template_file",
+     "doctype_for",
+     "format_name"
+    ],
+    "fields": [
+     {
+      "fieldname": "template_file",
+      "fieldtype": "Attach",
+      "in_list_view": 1,
+      "label": "Template File",
+      "reqd": 1
+     },
+     {
+      "fieldname": "doctype_for",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Doctype For",
+      "options": "DocType",
+      "reqd": 1
+     },
+     {
+      "fieldname": "format_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Name for Format",
+      "reqd": 1
+     }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2023-11-02 15:13:21.253642",
+    "modified_by": "Administrator",
+    "module": "Ampower Farmaans",
+    "name": "Template Docx",
+    "owner": "Administrator",
+    "permissions": [
+     {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+     }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+   }
