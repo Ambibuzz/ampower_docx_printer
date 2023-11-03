@@ -11,7 +11,7 @@ setup(
 	version=version,
 	description="by using custom .docx template create docx file or pdf for documents",
 	author="Ambibuzz Technologies LLP",
-	author_email="ithead@ambibuzz.com",
+	author_email="buzz.us@ambibuzz.com",
 	packages=find_packages(),
 	zip_safe=False,
 	include_package_data=True,
