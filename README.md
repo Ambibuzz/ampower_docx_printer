@@ -24,7 +24,7 @@ To create a custom print format, follow these steps:
 
 3. **Select DocType:** In the "Template Docx" DocType, select the relevant DocType from the "DocType For" dropdown list. This associates your custom print format with a specific DocType.
 
-4. **Upload Template:** Use the "Template File" field to upload your `.docx` template.
+4. **Upload Template:** Use the "Template File" field to upload your `.docx` template.![image](https://github.com/Ambibuzz/ampower_docx_printer/assets/97584010/83008482-28bb-41c1-abb1-8ab2ba7aca29)
 Template file list ![image](https://github.com/Ambibuzz/ampower_docx_printer/assets/97584010/c5741c05-50c2-4a52-9c3e-ee5dcbbc774c)
 
 ### Using Custom Print Formats
