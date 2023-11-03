@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include ampower_farmaans *.css
+recursive-include ampower_farmaans *.csv
+recursive-include ampower_farmaans *.html
+recursive-include ampower_farmaans *.ico
+recursive-include ampower_farmaans *.js
+recursive-include ampower_farmaans *.json
+recursive-include ampower_farmaans *.md
+recursive-include ampower_farmaans *.png
+recursive-include ampower_farmaans *.py
+recursive-include ampower_farmaans *.svg
+recursive-include ampower_farmaans *.txt
+recursive-exclude ampower_farmaans *.pyc
