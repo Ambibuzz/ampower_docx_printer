@@ -24,8 +24,8 @@ To create a custom print format, follow these steps:
 
 3. **Select DocType:** In the "Template Docx" DocType, select the relevant DocType from the "DocType For" dropdown list. This associates your custom print format with a specific DocType.
 
-4. **Upload Template:** Use the "Template File" field to upload your `.docx` template.![image](https://github.com/Ambibuzz/ampower_docx_printer/assets/97584010/83008482-28bb-41c1-abb1-8ab2ba7aca29)
-Template file list ![image](https://github.com/Ambibuzz/ampower_docx_printer/assets/97584010/c5741c05-50c2-4a52-9c3e-ee5dcbbc774c)
+4. **Upload Template:** Use the "Template File" field to upload your `.docx` template.![image](https://github.com/Ambibuzz/ampower_docx_printer/assets/97584010/239574c9-c414-4355-bd68-cea7a610a2c2)
+Template file list ![image](https://github.com/Ambibuzz/ampower_docx_printer/assets/97584010/8f446712-7ce8-4f12-9909-7cfbc4581c84)
 
 ### Using Custom Print Formats
 
@@ -33,11 +33,11 @@ On the document page of a specific DocType, you'll find a "Get Print" button. Fo
 
 1. **Click "Get Print":** Click the "Get Print" button to open a dialog.
 
-2. **Template Selection:** Choose your custom template from the dropdown list. Refer to ![image](https://github.com/Ambibuzz/ampower_docx_printer/assets/97584010/aa79b175-4257-4842-83b1-cae835678c61)
+2. **Template Selection:** Choose your custom template from the dropdown list. Refer to ![image](https://github.com/Ambibuzz/ampower_docx_printer/assets/97584010/6a8ecc99-88cd-4e06-a755-d94859841cc6)
 
 3. **Attach Docx:** Click "Attach Docx" to attach the `.docx` print format to the current document. This will populate the document with data from the template.
 
-4. **Download Docx:** Alternatively, you can click "Download Docx" to download the print format in `.docx` format.![image](https://github.com/Ambibuzz/ampower_docx_printer/assets/97584010/c8cfafdf-54c7-4e47-b858-0be5df814260)
+4. **Download Docx:** Alternatively, you can click "Download Docx" to download the print format in `.docx` format.![image](https://github.com/Ambibuzz/ampower_docx_printer/assets/97584010/ae17006d-d35c-44ff-9bed-ec9e4d248ca0)
 
 ## Technical Details
 
